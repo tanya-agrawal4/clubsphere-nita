@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Apply | ClubSphere</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>ClubSphere</h1>
+  <p>Student Application Form</p>
+</header>
+
+<section class="apply-container">
+  <div class="apply-card">
+    <h2 id="clubTitle">Apply</h2>
+    <p class="subtitle">Fill the details carefully</p>
+
+    <form id="applyForm">
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="College Email ID" required>
+      <input type="text" placeholder="Roll Number" required>
+
+      <select required>
+        <option value="">Year of Study</option>
+        <option>1st Year</option>
+        <option>2nd Year</option>
+        <option>3rd Year</option>
+        <option>4th Year</option>
+      </select>
+
+      <textarea placeholder="Why do you want to join this club?" required></textarea>
+
+      <button type="submit" class="btn apply">Submit Application</button>
+    </form>
+  </div>
+</section>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  document.getElementById("clubTitle").innerText =
+    "Apply to " + params.get("club");
+
+  document.getElementById("applyForm").onsubmit = function(e) {
+    e.preventDefault();
+    alert("✅ Application submitted successfully!");
+    window.location.href = "index.html";
+  };
+</script>
+
+</body>
+</html>

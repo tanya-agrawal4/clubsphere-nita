@@ -1,0 +1,115 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6fb;
+}
+
+header {
+  background: #1f2937;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.hero {
+  padding: 40px;
+  text-align: center;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px;
+}
+
+.controls input,
+.controls select {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.notice {
+  text-align: center;
+  color: #b91c1c;
+}
+
+.clubs {
+  padding: 40px;
+}
+
+.club-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+}
+
+.club-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.club-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.btn {
+  padding: 8px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+}
+
+.btn.insta { background: #e1306c; }
+.btn.apply { background: #16a34a; }
+.btn.disabled {
+  background: gray;
+  pointer-events: none;
+}
+
+.apply-container {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
+.apply-card {
+  background: white;
+  padding: 30px;
+  border-radius: 14px;
+  max-width: 420px;
+  width: 100%;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.apply-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+footer {
+  background: #1f2937;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+.admin-panel {
+  text-align: center;
+  margin-top: 40px;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin | ClubSphere</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Admin Dashboard</h1>
+</header>
+
+<div class="admin-panel">
+  <button onclick="toggle()">Toggle Applications</button>
+  <p id="status"></p>
+</div>
+
+<script>
+  let open = localStorage.getItem("open") !== "false";
+
+  function toggle() {
+    open = !open;
+    localStorage.setItem("open", open);
+    update();
+  }
+
+  function update() {
+    document.getElementById("status").innerText =
+      open ? "🟢 Applications Open" : "🔴 Applications Closed";
+  }
+
+  update();
+</script>
+
+</body>
+</html>
